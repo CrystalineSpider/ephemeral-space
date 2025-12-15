@@ -68925,9 +68925,6 @@ entities:
     - type: Transform
       pos: -2.5,-35.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
   - uid: 14327
     components:
     - type: Transform
@@ -69000,9 +68997,6 @@ entities:
     - type: Transform
       pos: -1.5,-35.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
 - proto: ShuttersNormalOpen
   entities:
   - uid: 102
@@ -69275,9 +69269,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -4.5,-37.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
     - type: DeviceLinkSource
       linkedPorts:
         14327:
