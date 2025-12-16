@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 267.3.0
+  engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/18/2025 23:48:16
+  time: 12/16/2025 00:00:05
   entityCount: 642
 maps:
 - 1
@@ -168,6 +168,7 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
+    - type: ExplosionAirtightGrid
 - proto: AlwaysPoweredlightRed
   entities:
   - uid: 173
@@ -216,7 +217,6 @@ entities:
       fixtures: {}
     - type: BatterySelfRecharger
       autoRechargeRate: 50000
-      autoRecharge: True
 - proto: AsteroidRock
   entities:
   - uid: 454
@@ -449,48 +449,6 @@ entities:
     components:
     - type: Transform
       pos: -7.5,14.5
-      parent: 2
-  - uid: 573
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -3.5,-7.5
-      parent: 2
-  - uid: 575
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -4.5,-7.5
-      parent: 2
-  - uid: 576
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,-7.5
-      parent: 2
-  - uid: 577
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 4.5,-7.5
-      parent: 2
-  - uid: 578
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,-7.5
-      parent: 2
-  - uid: 579
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,-7.5
-      parent: 2
-  - uid: 641
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-7.5
       parent: 2
 - proto: CurtainsRedOpen
   entities:
@@ -1552,29 +1510,64 @@ entities:
   - uid: 165
     components:
     - type: Transform
-      pos: 2.5,-7.5
+      pos: -3.5,-7.5
       parent: 2
   - uid: 170
     components:
     - type: Transform
-      pos: -1.5,-7.5
+      pos: -4.5,-7.5
       parent: 2
   - uid: 171
     components:
     - type: Transform
-      pos: -0.5,-7.5
+      pos: -5.5,-7.5
       parent: 2
   - uid: 172
     components:
     - type: Transform
-      pos: -2.5,-7.5
+      pos: 5.5,-7.5
       parent: 2
   - uid: 174
     components:
     - type: Transform
-      pos: 1.5,-7.5
+      pos: 4.5,-7.5
       parent: 2
   - uid: 175
+    components:
+    - type: Transform
+      pos: 6.5,-7.5
+      parent: 2
+  - uid: 573
+    components:
+    - type: Transform
+      pos: 0.5,-7.5
+      parent: 2
+  - uid: 575
+    components:
+    - type: Transform
+      pos: 2.5,-7.5
+      parent: 2
+  - uid: 576
+    components:
+    - type: Transform
+      pos: -1.5,-7.5
+      parent: 2
+  - uid: 577
+    components:
+    - type: Transform
+      pos: -0.5,-7.5
+      parent: 2
+  - uid: 578
+    components:
+    - type: Transform
+      pos: -2.5,-7.5
+      parent: 2
+  - uid: 579
+    components:
+    - type: Transform
+      pos: 1.5,-7.5
+      parent: 2
+  - uid: 641
     components:
     - type: Transform
       pos: 3.5,-7.5
@@ -1734,8 +1727,6 @@ entities:
     - type: Transform
       pos: -2.5,-10.5
       parent: 2
-    - type: Physics
-      bodyType: Static
 - proto: ESMobTheaterStaffSpawning
   entities:
   - uid: 581
@@ -1743,8 +1734,6 @@ entities:
     - type: Transform
       pos: 0.5,-9.5
       parent: 2
-    - type: Physics
-      bodyType: Static
 - proto: ESMobTheaterStaffStagehand
   entities:
   - uid: 586
@@ -1752,8 +1741,6 @@ entities:
     - type: Transform
       pos: 3.5,-10.5
       parent: 2
-    - type: Physics
-      bodyType: Static
 - proto: ESSpawnerRandomTrashFood25
   entities:
   - uid: 285
