@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/19/2025 05:05:47
-  entityCount: 14522
+  time: 12/21/2025 08:06:19
+  entityCount: 14531
 maps:
 - 3
 grids:
@@ -4904,7 +4904,7 @@ entities:
       pos: -11.5,1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -1429.6743
+      secondsUntilStateChange: -2003.2145
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -44085,6 +44085,14 @@ entities:
       parent: 2
 - proto: ExtinguisherCabinetFilled
   entities:
+  - uid: 855
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -34.5,-5.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
   - uid: 2155
     components:
     - type: Transform
@@ -62799,8 +62807,8 @@ entities:
   - uid: 9535
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,5.5
+      rot: -1.5707963267948966 rad
+      pos: 3.5,7.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -62885,6 +62893,14 @@ entities:
     components:
     - type: Transform
       pos: 16.5,-28.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14525
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -40.5,9.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -66291,6 +66307,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: 19.5,-51.5
       parent: 2
+  - uid: 14524
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -50.5,-12.5
+      parent: 2
 - proto: PoweredSmallLightEmpty
   entities:
   - uid: 8244
@@ -68594,6 +68616,48 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+  - uid: 14526
+    components:
+    - type: Transform
+      pos: -4.5,-28.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14527
+    components:
+    - type: Transform
+      pos: -23.5,-32.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14528
+    components:
+    - type: Transform
+      pos: -30.5,-21.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14529
+    components:
+    - type: Transform
+      pos: -30.5,1.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14530
+    components:
+    - type: Transform
+      pos: 8.5,-2.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14531
+    components:
+    - type: Transform
+      pos: -6.5,1.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
 - proto: Screwdriver
   entities:
   - uid: 14220
@@ -68601,19 +68665,6 @@ entities:
     - type: Transform
       pos: -12.5,-33.5
       parent: 2
-- proto: SecurityTechFab
-  entities:
-  - uid: 855
-    components:
-    - type: Transform
-      pos: -18.5,-18.5
-      parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
 - proto: SeedExtractor
   entities:
   - uid: 322
@@ -86908,6 +86959,11 @@ entities:
     components:
     - type: Transform
       pos: -5.5,-18.5
+      parent: 2
+  - uid: 14523
+    components:
+    - type: Transform
+      pos: -45.5,-10.5
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:
