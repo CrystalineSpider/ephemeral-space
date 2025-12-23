@@ -1,0 +1,50 @@
+- type: entity
+  id: ESSpawnerRandomDistributedCargo
+  parent: ESMarkerBase
+  name: Cargo Crate Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: crate
+    - state: random
+    - state: es
+    - state: c100
+  - type: ESDistributedSpawner
+    id: ESSpawnerCargo
+    tables:
+    # Engineering
+    - id: ESCrateEngineeringCableBulk
+    - id: ESCrateMaterialGlass
+    - id: ESCrateMaterialSteel
+    - id: ESCrateMaterialPlastic
+    - id: ESCrateMaterialPlasteel
+    - id: ESAdvancedToolsCrate
+    # Medical
+    - id: ESCrateMedicalSupplies
+    - id: ESCrateEmergencySpecializedKits
+    # Security
+    - id: ESCrateSecurityArmor
+    - id: ESCrateSecurityAmmo
+    - id: ESCrateSecurityShotgun
+    # Service
+    - id: ESCrateFoodCooking
+    - id: ESCrateServiceJanitorialSupplies
+    - id: ESCrateServiceReplacementLights
+    # General
+    - id: ESGeneralToolsCrate
+    - id: ESCrateEmergencyFire
+    - id: WaterTankHighCapacity
+    - id: ESCrateEmergencyEVA
+    
+- type: entity
+  id: ESSpawnerMarkerDistributedCargo
+  parent: ESMarkerBase
+  name: Cargo Marker
+  components:
+  - type: Sprite
+    layers:
+    - state: crate
+    - state: marker
+    - state: es
+  - type: ESDistributedSpawnerMarker
+    id: ESSpawnerCargo
