@@ -229,9 +229,9 @@
           amount: 2
         - id: Welder
           amount: 2
-        - id: Wirecutters
+        - id: Wirecutter
           amount: 2
-        - id: screwdriver
+        - id: Screwdriver
           amount: 2
         - id: Wrench
           amount: 2
