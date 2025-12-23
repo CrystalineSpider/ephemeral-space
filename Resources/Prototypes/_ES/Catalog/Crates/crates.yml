@@ -141,7 +141,7 @@
   - type: EntityTableContainerFill
     containers:
       entity_storage:
-          id: VendingMachineRestockChemVend
+        id: VendingMachineRestockChemVend
 
 #Security
 - type: entity
