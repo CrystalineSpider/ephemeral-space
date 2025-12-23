@@ -6,36 +6,59 @@
   - type: Sprite
     layers:
     - state: crate
-    - state: random
+    - state: rand-dist
+    - state: cargo
     - state: es
     - state: c100
-  - type: ESDistributedSpawner
-    id: ESSpawnerCargo
-    tables:
-    # Engineering
-    - id: ESCrateEngineeringCableBulk
-    - id: ESCrateMaterialGlass
-    - id: ESCrateMaterialSteel
-    - id: ESCrateMaterialPlastic
-    - id: ESCrateMaterialPlasteel
-    - id: ESAdvancedToolsCrate
-    # Medical
-    - id: ESCrateMedicalSupplies
-    - id: ESCrateEmergencySpecializedKits
-    # Security
-    - id: ESCrateSecurityArmor
-    - id: ESCrateSecurityAmmo
-    - id: ESCrateSecurityShotgun
-    # Service
-    - id: ESCrateFoodCooking
-    - id: ESCrateServiceJanitorialSupplies
-    - id: ESCrateServiceReplacementLights
-    # General
-    - id: ESGeneralToolsCrate
-    - id: ESCrateEmergencyFire
-    - id: WaterTankHighCapacity
-    - id: ESCrateEmergencyEVA
-    
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: ESSpawnerCargo
+
+- type: entityTable
+  id: ESSpawnerCargo
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 95
+      children:
+      # Engineering
+      - id: ESCrateEngineeringCableBulk
+      - id: ESCrateMaterialGlass
+      - id: ESCrateMaterialSteel
+      - id: ESCrateMaterialPlastic
+      - id: ESCrateMaterialPlasteel
+      # Medical
+      - id: ESCrateMedicalSupplies
+      - id: ESCrateEmergencySpecializedKits
+      # Security
+      - id: ESCrateSecurityArmor
+      - id: ESCrateSecurityAmmo
+      - id: ESCrateSecurityPistols
+      # Service
+      - id: ESCrateFoodCooking
+      - id: ESCrateServiceJanitorialSupplies
+      - id: ESCrateServiceReplacementLights
+      # General
+      - id: ESGeneralToolsCrate
+      - id: ESCrateEmergencyFire
+      - id: WaterTankHighCapacity
+      - id: ESCrateEmergencyEVA
+    - !type:GroupSelector
+      weight: 5
+      children:
+      # Engineering
+      - id: ESAdvancedToolsCrate
+      # Medical
+      - id: ESCrateEmergencyAdvancedKits
+      - id: ESCrateChemVendRestock
+      # Security
+      - id: ESCrateSecurityShotgun
+      - id: ESCrateSecurityNonlethals
+      - id: ESCrateSecurityEnergyRifles
+      - id: ESCrateSecurityThrowables
+      # Service
+      - id: ESCrateChefVendRestock
+
 - type: entity
   id: ESSpawnerMarkerDistributedCargo
   parent: ESMarkerBase
@@ -45,6 +68,7 @@
     layers:
     - state: crate
     - state: marker
+    - state: cargo
     - state: es
   - type: ESDistributedSpawnerMarker
     id: ESSpawnerCargo
