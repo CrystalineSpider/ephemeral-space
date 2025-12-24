@@ -21,8 +21,8 @@
     - id: ESCrateEmergencySpecializedKits
     - id: ESCrateEmergencyAdvancedKits
       weight: 0.25
-    - id: ESCrateChemVendRestock # Maybe this should be moved to a seperate roll
-      weight: 0.5
+    - id: ESCrateChemVendRestock
+      weight: 0.5 # Maybe this should be moved to a seperate roll
 
 - type: entityTable
   id: ESCargoSecurityCratesTable
@@ -76,19 +76,13 @@
   - type: ESDistributedSpawner
     id: ESSpawnerCargo
     tables:
-      #all:
-      #- !type:NestedSelector
       - tableId: ESCargoEngineeringCratesTable
         rolls: 4
-      #- !type:NestedSelector
       - tableId: ESCargoMedicalCratesTable
         rolls: 2
-      #- !type:NestedSelector
       - tableId: ESCargoSecurityCratesTable
-      #- !type:NestedSelector
       - tableId: ESCargoServiceCratesTable
         rolls: 2
-      #- !type:NestedSelector
       - tableId: ESCargoGeneralCratesTable
         rolls: 2
 
