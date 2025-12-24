@@ -17,7 +17,6 @@
   table:
     group:
     - id: ESCrateMedicalSupplies
-      weigh: 1.25
     - id: ESCrateEmergencySpecializedKits
     - id: ESCrateEmergencyAdvancedKits
       weight: 0.25
