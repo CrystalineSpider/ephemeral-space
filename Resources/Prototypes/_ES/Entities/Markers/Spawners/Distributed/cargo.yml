@@ -1,5 +1,3 @@
-
-
 - type: entityTable
   id: ESCargoEngineeringCratesTable
   table:
@@ -76,14 +74,16 @@
     id: ESSpawnerCargo
     tables:
       - tableId: ESCargoEngineeringCratesTable
-        rolls: 4
+      - tableId: ESCargoEngineeringCratesTable
+      - tableId: ESCargoEngineeringCratesTable
+      - tableId: ESCargoEngineeringCratesTable
       - tableId: ESCargoMedicalCratesTable
-        rolls: 2
+      - tableId: ESCargoMedicalCratesTable
       - tableId: ESCargoSecurityCratesTable
       - tableId: ESCargoServiceCratesTable
-        rolls: 2
+      - tableId: ESCargoServiceCratesTable
       - tableId: ESCargoGeneralCratesTable
-        rolls: 2
+      - tableId: ESCargoGeneralCratesTable
 
 - type: entity
   id: ESSpawnerMarkerDistributedCargo
