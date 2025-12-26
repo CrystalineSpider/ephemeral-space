@@ -1,10 +1,10 @@
 - type: job
-  id: Janitor
+  id: ESJanitor
   name: job-name-janitor
   description: job-description-janitor
   suffix: ES
-  playTimeTracker: JobJanitor
-  startingGear: JanitorGear
+  playTimeTracker: ESJobJanitor
+  startingGear: ESJanitorGear
   icon: "JobIconJanitor"
   supervisors: job-supervisors-hop
   access:
@@ -17,29 +17,19 @@
     prototype: WeaponRevolverInspector
 
 - type: startingGear
-  id: JanitorGear
+  id: ESJanitorGear
   equipment:
     shoes: ClothingShoesGaloshes
     id: JanitorPDA
     ears: ClothingHeadsetService
+    head: ClothingHeadHatPurplesoft
     belt: ClothingBeltJanitorFilled
-  #storage:
-    #back:
-    #- Stuff
-
-- type: startingGear
-  id: JanitorMaidGear
-  equipment:
-    jumpsuit: ClothingUniformJumpskirtJanimaid
-    id: JanitorPDA
-    gloves: ClothingHandsGlovesJanitor
-    head: ClothingHeadHatCatEars
-    ears: ClothingHeadsetService
-    belt: ClothingBeltJanitorFilled
+    jumpsuit: ClothingUniformJumpsuitJanitor
+    back: ClothingBackpack
 
 - type: chameleonOutfit
-  id: JanitorChameleonOutfit
-  job: Janitor
+  id: ESJanitorChameleonOutfit
+  job: ESJanitor
   equipment:
     head: ClothingHeadHatPurplesoft
     eyes: ClothingEyesGlassesCheapSunglasses

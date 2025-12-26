@@ -1,14 +1,14 @@
 - type: job
-  id: Bartender
+  id: ESBartender
   name: job-name-bartender
   description: job-description-bartender
   suffix: ES
-  playTimeTracker: JobBartender
+  playTimeTracker: ESJobBartender
   requirements:
     - !type:DepartmentTimeRequirement
       department: Civilian
       time: 0.5h
-  startingGear: BartenderGear
+  startingGear: ESBartenderGear
   icon: "JobIconBartender"
   supervisors: job-supervisors-hop
   access:
@@ -20,18 +20,19 @@
   - Hydroponics
 
 - type: startingGear
-  id: BartenderGear
+  id: ESBartenderGear
   equipment:
     shoes: ClothingShoesColorBlack
     id: BartenderPDA
     ears: ClothingHeadsetService
-  #storage:
-    #back:
-    #- Stuff
+    head: ClothingHeadHatTophat
+    jumpsuit: ClothingUniformJumpsuitBartender
+    outerClothing: ClothingOuterVest
+    back: ClothingBackpack
 
 - type: chameleonOutfit
-  id: BartenderChameleonOutfit
-  job: Bartender
+  id: ESBartenderChameleonOutfit
+  job: ESBartender
   equipment:
     head: ClothingHeadHatTophat
     eyes: ClothingEyesGlassesSunglasses

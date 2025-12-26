@@ -1,14 +1,14 @@
 - type: job
-  id: Detective
+  id: ESDetective
   name: job-name-detective
   description: job-description-detective
   suffix: ES
-  playTimeTracker: JobDetective
+  playTimeTracker: ESJobDetective
   requirements:
   - !type:RoleTimeRequirement
     role: JobSecurityOfficer
     time: 5h
-  startingGear: DetectiveGear
+  startingGear: ESDetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos
   canBeAntag: false
@@ -24,12 +24,18 @@
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: DetectiveGear
+  id: ESDetectiveGear
   equipment:
+    shoes: ClothingShoesColorBrown
     eyes: ClothingEyesGlassesSecurity
     id: DetectivePDA
     ears: ClothingHeadsetSecurity
+    head: ClothingHeadHatFedoraBrown
+    neck: ClothingNeckTieDet
     belt: ClothingBeltHolsterFilled
+    jumpsuit: ClothingUniformJumpsuitDetective
+    outerClothing: ClothingOuterCoatDetectiveLoadout
+    back: ClothingBackpackSecurity
   storage:
     back:
     - Flash
@@ -37,8 +43,8 @@
     - ForensicScanner
 
 - type: chameleonOutfit
-  id: DetectiveChameleonOutfit
-  job: Detective
+  id: eSDetectiveChameleonOutfit
+  job: ESDetective
   hasMindShield: true
   equipment:
     head: ClothingHeadHatFedoraBrown

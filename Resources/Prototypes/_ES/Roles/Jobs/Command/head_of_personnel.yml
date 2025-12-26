@@ -1,9 +1,9 @@
 - type: job
-  id: HeadOfPersonnel
+  id: ESHeadOfPersonnel
   name: job-name-hop
   description: job-description-hop
   suffix: ES
-  playTimeTracker: JobHeadOfPersonnel
+  playTimeTracker: ESJobHeadOfPersonnel
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -21,7 +21,7 @@
       department: Command
       time: 2.5h
   weight: 20
-  startingGear: HoPGear
+  startingGear: ESHoPGear
   icon: "JobIconHeadOfPersonnel"
   supervisors: job-supervisors-captain
   canBeAntag: false
@@ -60,20 +60,23 @@
       - type: CommandStaff
 
 - type: startingGear
-  id: HoPGear
+  id: ESHoPGear
   equipment:
     shoes: ClothingShoesColorBrown
+    eyes: ClothingEyesHudSecurity
     id: HoPPDA
     ears: ClothingHeadsetAltCommand
+    head: ClothingHeadHatHopcap
     belt: BoxFolderClipboardThreePapers
-    eyes: ClothingEyesHudSecurity
+    jumpsuit: ClothingUniformJumpsuitHoP
+    back: ClothingBackpack
   storage:
     back:
     - Flash
 
 - type: chameleonOutfit
-  id: HeadOfPersonnelChameleonOutfit
-  job: HeadOfPersonnel
+  id: ESHeadOfPersonnelChameleonOutfit
+  job: ESHeadOfPersonnel
   hasMindShield: true
   equipment:
     head: ClothingHeadHatHopcap

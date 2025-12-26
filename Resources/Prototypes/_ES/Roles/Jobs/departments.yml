@@ -1,14 +1,12 @@
 - type: department
-  id: Cargo
+  id: ESCargo
   name: department-Cargo
   description: department-Cargo-description
   color: "#A46106"
   roles:
-  - CargoTechnician
-  - Quartermaster
-  - SalvageSpecialist
+  - ESCargoTechnician
+  - ESSalvageSpecialist
 
-# ES START
 - type: department
   id: ESService
   name: department-Service
@@ -16,155 +14,72 @@
   color: "#639137"
   weight: -5
   roles:
-  - Bartender
-  - Botanist
-  - Chef
-  - Janitor
-  - ServiceWorker
-# ES END
+  - ESBartender
+  - ESBotanist
+  - ESChef
+  - ESJanitor
 
 - type: department
-  id: Civilian
+  id: ESCivilian
   name: department-Civilian
   description: department-Civilian-description
-# ES START
   color: "#6e6e6e"
   weight: -10
   roles:
-#  - Bartender
-#  - Botanist
-#  - Chef
-#  - Janitor
-  - Chaplain
-  - Clown
-  - HeadOfPersonnel
-  - Lawyer
-  - Librarian
-  - Mime
-  - Musician
-  - Passenger
-  - Reporter
-  - Visitor
-#  - ServiceWorker
-# ES END
+  - ESClown
+  - ESHeadOfPersonnel
+  - ESPassenger
+  - ESReporter
 
 - type: department
-  id: CentralCommand
-  name: department-CentralCommand
-  description: department-CentralCommand-description
-  color: "#0c344d"
-  roles:
-  - CentralCommandOfficial
-  - CBURN
-  - ERTLeader
-  - ERTChaplain
-  - ERTJanitor
-  - ERTMedical
-  - ERTSecurity
-  - ERTEngineer
-  - DeathSquad
-  editorHidden: true
-  weight: 120
-
-- type: department
-  id: Command
+  id: ESCommand
   name: department-Command
   description: department-Command-description
   color: "#334E6D"
   roles:
-  - Captain
-  - ChiefEngineer
-  - ChiefMedicalOfficer
-  - HeadOfPersonnel
-  - HeadOfSecurity
-  - ResearchDirector
-  - Quartermaster
-  - CentralCommandOfficial
-  - CBURN
-  - ERTLeader
-  - ERTChaplain
-  - ERTJanitor
-  - ERTMedical
-  - ERTSecurity
-  - ERTEngineer
-  - DeathSquad
+  - ESCaptain
+  - ESHeadOfPersonnel
+  - ESHeadOfSecurity
   primary: false
   weight: 100
 
 - type: department
-  id: Engineering
+  id: ESEngineering
   name: department-Engineering
   description: department-Engineering-description
-# ES START
   color: "#f39f27"
   weight: 10
-# ES END
   roles:
-  - AtmosphericTechnician
-  - ChiefEngineer
-  - StationEngineer
-  - TechnicalAssistant
+  - ESAtmosphericTechnician
+  - ESStationEngineer
 
 - type: department
-  id: Medical
+  id: ESMedical
   name: department-Medical
   description: department-Medical-description
-# ES START
   color: "#57b8f0"
   weight: 5
-# ES END
   roles:
-  - Chemist
-  - ChiefMedicalOfficer
-  - MedicalDoctor
-  - MedicalIntern
-  - Psychologist
-  - Paramedic
+  - ESChemist
+  - ESMedicalDoctor
 
 - type: department
-  id: Security
+  id: ESSecurity
   name: department-Security
   description: department-Security-description
   color: "#DE3A3A"
   weight: 20
   roles:
-  - HeadOfSecurity
-  - SecurityCadet
-  - SecurityOfficer
-  - Detective
-  - Warden
+  - ESHeadOfSecurity
+  - ESSecurityOfficer
+  - ESDetective
+  - ESWarden
 
 - type: department
-  id: Science
+  id: ESScience
   name: department-Science
   description: department-Science-description
   color: "#D381C9"
-# ES START
   weight: 4
-# ES END
   roles:
-  - ResearchDirector
-  - Scientist
-  - ResearchAssistant
-
-- type: department
-  id: Silicon
-  name: department-Silicon
-  description: department-Silicon-description
-  color: "#D381C9"
-  roles:
-  - Borg
-  - StationAi
-
-- type: department
-  id: Specific
-  name: department-Specific
-  description: department-Specific-description
-  color: "#9FED58"
-  weight: 10
-  roles:
-# ES START
-#  - Reporter
-# ES END
-  - Psychologist
-  primary: false
+  - ESScientist

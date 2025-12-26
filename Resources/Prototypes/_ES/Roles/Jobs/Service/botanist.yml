@@ -1,10 +1,10 @@
 - type: job
-  id: Botanist
+  id: ESBotanist
   name: job-name-botanist
   description: job-description-botanist
   suffix: ES
-  playTimeTracker: JobBotanist
-  startingGear: BotanistGear
+  playTimeTracker: ESJobBotanist
+  startingGear: ESBotanistGear
   icon: "JobIconBotanist"
   supervisors: job-supervisors-hop
   access:
@@ -20,19 +20,19 @@
     prototype: CannabisSeeds
 
 - type: startingGear
-  id: BotanistGear
+  id: ESBotanistGear
   equipment:
     shoes: ClothingShoesColorBrown
     id: BotanistPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltPlantFilled
-  #storage:
-    #back:
-    #- Stuff
+    jumpsuit: ClothingUniformJumpsuitHydroponics
+    outerClothing: ClothingOuterApronBotanist
+    back: ClothingBackpackHydroponics
 
 - type: chameleonOutfit
-  id: BotanistChameleonOutfit
-  job: Botanist
+  id: ESBotanistChameleonOutfit
+  job: ESBotanist
   equipment:
     head: ClothingHeadBandBotany
     eyes: ClothingEyesGlassesCheapSunglasses

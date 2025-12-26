@@ -1,14 +1,14 @@
 - type: job
-  id: MedicalDoctor
+  id: ESMedicalDoctor
   name: job-name-doctor
   description: job-description-doctor
   suffix: ES
-  playTimeTracker: JobMedicalDoctor
+  playTimeTracker: ESJobMedicalDoctor
   requirements:
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 2.5h
-  startingGear: DoctorGear
+  startingGear: ESDoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-cmo
   access:
@@ -22,17 +22,22 @@
     prototype: WehMedipen
 
 - type: startingGear
-  id: DoctorGear
+  id: ESDoctorGear
   equipment:
+    shoes: ClothingShoesColorWhite
+    id: MedicalPDA
+    gloves: ClothingHandsGlovesColorBlue
+    head: ClothingHeadHatSurgcapBlue
+    mask: ClothingMaskSterile
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
-  #storage:
-    #back:
-    #- Stuff
+    jumpsuit: ClothingUniformJumpsuitMedicalDoctor
+    outerClothing: ClothingOuterCoatLabOpened
+    back: ClothingBackpackMedical
 
 - type: chameleonOutfit
-  id: MedicalDoctorChameleonOutfit
-  job: MedicalDoctor
+  id: ESMedicalDoctorChameleonOutfit
+  job: ESMedicalDoctor
   equipment:
     head: ClothingHeadNurseHat
     eyes: ClothingEyesHudMedical

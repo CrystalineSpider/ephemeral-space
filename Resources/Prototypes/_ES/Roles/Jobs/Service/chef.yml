@@ -1,14 +1,14 @@
 - type: job
-  id: Chef
+  id: ESChef
   name: job-name-chef
   description: job-description-chef
   suffix: ES
-  playTimeTracker: JobChef
+  playTimeTracker: ESJobChef
   requirements:
     - !type:DepartmentTimeRequirement
       department: Civilian
       time: 0.5h
-  startingGear: ChefGear
+  startingGear: ESChefGear
   icon: "JobIconChef"
   supervisors: job-supervisors-hop
   access:
@@ -20,19 +20,20 @@
   - Bar
 
 - type: startingGear
-  id: ChefGear
+  id: ESChefGear
   equipment:
     shoes: ClothingShoesChef
     id: ChefPDA
     ears: ClothingHeadsetService
+    head: ClothingHeadHatChef
+    jumpsuit: ClothingUniformJumpsuitChef
+    outerClothing: ClothingOuterJacketChef
     belt: ClothingBeltChefFilled
-  #storage:
-    #back:
-    #- Stuff
+    back: ClothingBackpack
 
 - type: chameleonOutfit
-  id: ChefChameleonOutfit
-  job: Chef
+  id: ESChefChameleonOutfit
+  job: ESChef
   equipment:
     head: ClothingHeadHatChef
     eyes: ClothingEyesGlassesCheapSunglasses

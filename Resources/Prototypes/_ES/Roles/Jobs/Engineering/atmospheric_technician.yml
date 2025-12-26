@@ -1,14 +1,14 @@
 - type: job
-  id: AtmosphericTechnician
+  id: ESAtmosphericTechnician
   name: job-name-atmostech
   description: job-description-atmostech
   suffix: ES
-  playTimeTracker: JobAtmosphericTechnician
+  playTimeTracker: ESJobAtmosphericTechnician
   requirements:
   - !type:DepartmentTimeRequirement
     department: Engineering
     time: 2.5h
-  startingGear: AtmosphericTechnicianGear
+  startingGear: ESAtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-ce
   access:
@@ -22,19 +22,19 @@
     prototype: FireAxe
 
 - type: startingGear
-  id: AtmosphericTechnicianGear
+  id: ESAtmosphericTechnicianGear
   equipment:
+    shoes: ClothingShoesColorWhite
     eyes: ClothingEyesGlassesMeson
     id: AtmosPDA
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
-  #storage:
-    #back:
-    #- Stuff
+    jumpsuit: ClothingUniformJumpsuitAtmos
+    back: ClothingBackpackEngineering
 
 - type: chameleonOutfit
-  id: AtmosphericTechnicianChameleonOutfit
-  job: AtmosphericTechnician
+  id: ESAtmosphericTechnicianChameleonOutfit
+  job: ESAtmosphericTechnician
   equipment:
     head: ClothingHeadHelmetAtmosFire
     mask: ClothingMaskGasAtmos

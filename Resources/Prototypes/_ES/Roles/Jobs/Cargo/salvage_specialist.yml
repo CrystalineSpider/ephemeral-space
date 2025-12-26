@@ -1,15 +1,15 @@
 - type: job
-  id: SalvageSpecialist
+  id: ESSalvageSpecialist
   name: job-name-salvagespec
   description: job-description-salvagespec
   suffix: ES
-  playTimeTracker: JobSalvageSpecialist
+  playTimeTracker: ESJobSalvageSpecialist
   requirements:
     - !type:DepartmentTimeRequirement
       department: Cargo
       time: 2.5h
   icon: "JobIconShaftMiner"
-  startingGear: SalvageSpecialistGear
+  startingGear: ESSalvageSpecialistGear
   supervisors: job-supervisors-qm
   access:
   - Cargo
@@ -18,18 +18,16 @@
   - External
 
 - type: startingGear
-  id: SalvageSpecialistGear
+  id: ESSalvageSpecialistGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     id: SalvagePDA
     ears: ClothingHeadsetCargo
-  #storage:
-    #back:
-    #- Stuff
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    back: ClothingBackpackSalvage
 
 - type: chameleonOutfit
-  id: SalvageSpecialistChameleonOutfit
-  job: SalvageSpecialist
+  id: ESSalvageSpecialistChameleonOutfit
+  job: ESSalvageSpecialist
   equipment:
     head: ClothingHeadHatCargosoft
     eyes: ClothingEyesGlassesCheapSunglasses

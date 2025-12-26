@@ -1,9 +1,9 @@
 - type: job
-  id: HeadOfSecurity
+  id: ESHeadOfSecurity
   name: job-name-hos
   description: job-description-hos
   suffix: ES
-  playTimeTracker: JobHeadOfSecurity
+  playTimeTracker: ESJobHeadOfSecurity
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
@@ -18,7 +18,7 @@
       department: Security
       time: 10h
   weight: 10
-  startingGear: HoSGear
+  startingGear: ESHoSGear
   icon: "JobIconHeadOfSecurity"
   supervisors: job-supervisors-captain
   canBeAntag: false
@@ -42,20 +42,26 @@
       - type: CommandStaff
 
 - type: startingGear
-  id: HoSGear
+  id: ESHoSGear
   equipment:
+    shoes: ClothingShoesBootsJack
     eyes: ClothingEyesGlassesSecurity
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
+    head: ClothingHeadHatHoshat
+    belt: ClothingBeltSecurityFilled
+    jumpsuit: ClothingUniformJumpsuitHoS
+    outerClothing: ClothingOuterCoatHoSTrench
+    back: ClothingBackpackSecurity
     pocket1: ESWeaponHybridTaser
   storage:
     back:
     - Flash
 
 - type: chameleonOutfit
-  id: HeadOfSecurityChameleonOutfit
-  job: HeadOfSecurity
+  id: ESHeadOfSecurityChameleonOutfit
+  job: ESHeadOfSecurity
   hasMindShield: true
   equipment:
     mask: ClothingMaskGasSecurity

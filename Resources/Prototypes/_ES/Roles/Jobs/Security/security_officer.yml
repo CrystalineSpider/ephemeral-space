@@ -1,14 +1,14 @@
 - type: job
-  id: SecurityOfficer
+  id: ESSecurityOfficer
   name: job-name-security
   description: job-description-security
   suffix: ES
-  playTimeTracker: JobSecurityOfficer
+  playTimeTracker: ESJobSecurityOfficer
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
       time: 2.5h
-  startingGear: SecurityOfficerGear
+  startingGear: ESSecurityOfficerGear
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos
   canBeAntag: false
@@ -23,18 +23,25 @@
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: SecurityOfficerGear
+  id: ESSecurityOfficerGear
   equipment:
+    shoes: ClothingShoesBootsJack
     eyes: ClothingEyesGlassesSecurity
+    id: SecurityPDA
     ears: ClothingHeadsetSecurity
+    head: ClothingHeadHelmetBasic
+    belt: ClothingBeltSecurityFilled
+    jumpsuit: ClothingUniformJumpsuitSec
+    outerClothing: ClothingOuterArmorBasic
+    back: ClothingBackpackSecurity
     pocket1: ESWeaponHybridTaser
   storage:
     back:
     - Flash
 
 - type: chameleonOutfit
-  id: SecurityOfficerChameleonOutfit
-  job: SecurityOfficer
+  id: ESSecurityOfficerChameleonOutfit
+  job: ESSecurityOfficer
   hasMindShield: true
   equipment:
     head: ClothingHeadHelmetBasic

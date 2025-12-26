@@ -1,14 +1,14 @@
 - type: job
-  id: Chemist
+  id: ESChemist
   name: job-name-chemist
   description: job-description-chemist
   suffix: ES
-  playTimeTracker: JobChemist
+  playTimeTracker: ESJobChemist
   requirements:
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 5h
-  startingGear: ChemistGear
+  startingGear: ESChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-cmo
   access:
@@ -17,20 +17,22 @@
   - Maintenance
 
 - type: startingGear
-  id: ChemistGear
+  id: ESChemistGear
   equipment:
+    shoes: ClothingShoesColorWhite
+    eyes: ClothingEyesGlassesChemical
+    gloves: ClothingHandsGlovesColorBlue
     id: ChemistryPDA
     ears: ClothingHeadsetMedical
     belt: ChemBag
+    jumpsuit: ClothingUniformJumpsuitChemistry
+    outerClothing: ClothingOuterCoatLabChemOpened
+    back: ClothingBackpackChemistry
     pocket1: HandLabeler
-    eyes: ClothingEyesGlassesChemical
-  #storage:
-    #back:
-    #- Stuff
 
 - type: chameleonOutfit
-  id: ChemistChameleonOutfit
-  job: Chemist
+  id: ESChemistChameleonOutfit
+  job: ESChemist
   equipment:
     head: ClothingHeadHatBeretMedic
     mask: ClothingMaskSterile

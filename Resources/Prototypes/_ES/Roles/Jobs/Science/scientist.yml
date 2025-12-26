@@ -1,14 +1,14 @@
 - type: job
-  id: Scientist
+  id: ESScientist
   name: job-name-scientist
   description: job-description-scientist
   suffix: ES
-  playTimeTracker: JobScientist
+  playTimeTracker: ESJobScientist
   requirements:
     - !type:DepartmentTimeRequirement
       department: Science
       time: 2.5h
-  startingGear: ScientistGear
+  startingGear: ESScientistGear
   icon: "JobIconScientist"
   supervisors: job-supervisors-rd
   access:
@@ -16,16 +16,19 @@
   - Maintenance
 
 - type: startingGear
-  id: ScientistGear
+  id: ESScientistGear
   equipment:
+    shoes: ClothingShoesChef
+    id: SciencePDA
+    neck: ClothingNeckTieSci
     ears: ClothingHeadsetScience
-  #storage:
-    #back:
-    #- Stuff
+    jumpsuit: ClothingUniformJumpsuitScientist
+    outerClothing: ClothingOuterCoatLabOpened
+    back: ClothingBackpackScience
 
 - type: chameleonOutfit
-  id: ScientistChameleonOutfit
-  job: Scientist
+  id: ESScientistChameleonOutfit
+  job: ESScientist
   equipment:
     head: ClothingHeadBandSkull
     eyes: ClothingEyesGlassesCheapSunglasses

@@ -1,9 +1,9 @@
 - type: job
-  id: Captain
+  id: ESCaptain
   name: job-name-captain
   description: job-description-captain
   suffix: ES
-  playTimeTracker: JobCaptain
+  playTimeTracker: ESJobCaptain
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -21,7 +21,7 @@
       department: Command
       time: 4h
   weight: 20
-  startingGear: CaptainGear
+  startingGear: ESCaptainGear
   icon: "JobIconCaptain"
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
@@ -36,21 +36,24 @@
       - type: CommandStaff
 
 - type: startingGear
-  id: CaptainGear
+  id: ESCaptainGear
   equipment:
     shoes: ClothingShoesColorBrown
     eyes: ClothingEyesGlassesSecurity
     gloves: ClothingHandsGlovesCaptain
     id: CaptainPDA
     ears: ClothingHeadsetAltCommand
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    outerClothing: ClothingOuterArmorCaptainCarapace
+    back: ClothingBackpackCaptain
   storage:
     back:
     - Flash
     # - StationCharter
 
 - type: chameleonOutfit
-  id: CaptainChameleonOutfit
-  job: Captain
+  id: ESCaptainChameleonOutfit
+  job: ESCaptain
   hasMindShield: true
   equipment:
     head: ClothingHeadHatCapcap

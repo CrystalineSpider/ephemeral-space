@@ -1,10 +1,10 @@
 - type: job
-  id: Clown
+  id: ESClown
   name: job-name-clown
   description: job-description-clown
   suffix: ES
-  playTimeTracker: JobClown
-  startingGear: ClownGear
+  playTimeTracker: ESJobClown
+  startingGear: ESClownGear
   icon: "JobIconClown"
   supervisors: job-supervisors-hop
   access:
@@ -29,21 +29,24 @@
     implants: [ SadTromboneImplant ]
 
 - type: startingGear
-  id: ClownGear
+  id: ESClownGear
   equipment:
     mask: ClothingMaskClown
     pocket1: BikeHorn
     pocket2: ClownRecorder
     id: ClownPDA
     ears: ClothingHeadsetService
+    head: ClothingMaskClown
+    jumpsuit: ClothingUniformJumpsuitClown
+    back: ClothingBackpackClown
   storage:
     back:
     - RubberStampClown
     - CrayonRainbow
 
 - type: chameleonOutfit
-  id: ClownChameleonOutfit
-  job: Clown
+  id: ESClownChameleonOutfit
+  job: ESClown
   equipment:
     head: ClothingHeadHatXmasCrown
     eyes: ClothingEyesGlassesCheapSunglasses

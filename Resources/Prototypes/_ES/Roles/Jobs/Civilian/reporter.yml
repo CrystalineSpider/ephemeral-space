@@ -1,10 +1,10 @@
 - type: job
-  id: Reporter
+  id: ESReporter
   name: job-name-reporter
   description: job-description-reporter
   suffix: ES
-  playTimeTracker: JobReporter
-  startingGear: ReporterGear
+  playTimeTracker: ESJobReporter
+  startingGear: ESReporterGear
   icon: "JobIconReporter"
   supervisors: job-supervisors-hop
   access:
@@ -12,19 +12,18 @@
   - Maintenance
 
 - type: startingGear
-  id: ReporterGear
+  id: ESReporterGear
   equipment:
     shoes: ClothingShoesColorBrown
     id: ReporterPDA
     ears: ClothingHeadsetService
     head: ClothingHeadHatFedoraGrey
-  #storage:
-    #back:
-    #- Stuff
+    jumpsuit: ClothingUniformJumpsuitReporter
+    back: ClothingBackpack
 
 - type: chameleonOutfit
-  id: ReporterChameleonOutfit
-  job: Reporter
+  id: ESReporterChameleonOutfit
+  job: ESReporter
   equipment:
     head: ClothingHeadHatFedoraGrey
     eyes: ClothingEyesGlassesCheapSunglasses
@@ -32,3 +31,4 @@
     outerClothing: ClothingOuterCoatTrench
     neck: ClothingNeckTieRed
     gloves: ClothingHandsGlovesFingerless
+    jumpsuit: ClothingUniformJumpsuitReporter

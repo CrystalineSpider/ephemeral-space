@@ -1,27 +1,26 @@
 - type: job
-  id: Passenger
+  id: ESPassenger
   name: job-name-passenger
   description: job-description-passenger
   suffix: ES
-  playTimeTracker: JobPassenger
-  startingGear: PassengerGear
+  playTimeTracker: ESJobPassenger
+  startingGear: ESPassengerGear
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
   access:
   - Maintenance
 
 - type: startingGear
-  id: PassengerGear
+  id: ESPassengerGear
   equipment:
     id: PassengerPDA
     ears: ClothingHeadsetGrey
-  #storage:
-    #back:
-    #- Stuff
+    jumpsuit: ClothingUniformJumpsuitColorGrey
+    back: ClothingBackpack
 
 - type: chameleonOutfit
-  id: PassengerChameleonOutfit
-  job: Passenger
+  id: ESPassengerChameleonOutfit
+  job: ESPassenger
   equipment:
     head: ClothingHeadHatWelding
     eyes: ClothingEyesGlassesCheapSunglasses

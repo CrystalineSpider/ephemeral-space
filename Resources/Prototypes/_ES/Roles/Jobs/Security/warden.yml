@@ -1,9 +1,9 @@
 - type: job
-  id: Warden
+  id: ESWarden
   name: job-name-warden
   description: job-description-warden
   suffix: ES
-  playTimeTracker: JobWarden
+  playTimeTracker: ESJobWarden
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
@@ -12,7 +12,7 @@
       department: Security
       time: 10h
   weight: 5
-  startingGear: WardenGear
+  startingGear: ESWardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos
   canBeAntag: false
@@ -31,19 +31,24 @@
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: WardenGear
+  id: ESWardenGear
   equipment:
+    shoes: ClothingShoesBootsJack
     eyes: ClothingEyesGlassesSecurity
     id: WardenPDA
     ears: ClothingHeadsetSecurity
+    head: ClothingHeadHatWarden
+    jumpsuit: ClothingUniformJumpsuitWarden
+    outerClothing: ClothingOuterCoatWarden
+    back: ClothingBackpackSecurity
     pocket1: ESWeaponHybridTaser
   storage:
     back:
     - Flash
 
 - type: chameleonOutfit
-  id: WardenChameleonOutfit
-  job: Warden
+  id: ESWardenChameleonOutfit
+  job: ESWarden
   hasMindShield: true
   equipment:
     head: ClothingHeadHatWarden

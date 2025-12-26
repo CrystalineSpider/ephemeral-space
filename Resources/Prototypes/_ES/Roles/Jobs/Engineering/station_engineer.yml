@@ -1,14 +1,14 @@
 - type: job
-  id: StationEngineer
+  id: ESStationEngineer
   name: job-name-engineer
   description: job-description-engineer
   suffix: ES
-  playTimeTracker: JobStationEngineer
+  playTimeTracker: ESJobStationEngineer
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
       time: 2.5h
-  startingGear: StationEngineerGear
+  startingGear: ESStationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce
   access:
@@ -19,18 +19,20 @@
   - Atmospherics
 
 - type: startingGear
-  id: StationEngineerGear
+  id: ESStationEngineerGear
   equipment:
+    shoes: ClothingShoesColorOrange
     eyes: ClothingEyesGlassesMeson
+    id: EngineerPDA
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
-  #storage:
-    #back:
-    #- Stuff
+    head: ClothingHeadHatHardhatYellow
+    jumpsuit: ClothingUniformJumpsuitEngineering
+    outerClothing: ClothingOuterVestHazard
 
 - type: chameleonOutfit
-  id: StationEngineerChameleonOutfit
-  job: StationEngineer
+  id: ESStationEngineerChameleonOutfit
+  job: ESStationEngineer
   equipment:
     head: ClothingHeadHatHardhatYellow
     mask: ClothingMaskBreath
