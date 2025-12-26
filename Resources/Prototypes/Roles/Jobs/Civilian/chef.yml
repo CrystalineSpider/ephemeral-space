@@ -21,9 +21,6 @@
 - type: startingGear
   id: ChefGear
   equipment:
-# ES START
-    shoes: ClothingShoesChef
-# ES END
     id: ChefPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltChefFilled
