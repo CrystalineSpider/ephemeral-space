@@ -2,7 +2,6 @@
   id: ESBartender
   name: job-name-bartender
   description: job-description-bartender
-  suffix: ES
   playTimeTracker: ESJobBartender
   requirements:
     - !type:DepartmentTimeRequirement

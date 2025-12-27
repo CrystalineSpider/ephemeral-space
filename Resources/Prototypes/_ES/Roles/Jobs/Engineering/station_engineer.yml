@@ -2,7 +2,6 @@
   id: ESStationEngineer
   name: job-name-engineer
   description: job-description-engineer
-  suffix: ES
   playTimeTracker: ESJobStationEngineer
   requirements:
     - !type:DepartmentTimeRequirement

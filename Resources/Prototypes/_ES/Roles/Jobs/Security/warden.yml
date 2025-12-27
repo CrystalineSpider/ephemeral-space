@@ -2,7 +2,6 @@
   id: ESWarden
   name: job-name-warden
   description: job-description-warden
-  suffix: ES
   playTimeTracker: ESJobWarden
   requirements:
     - !type:RoleTimeRequirement

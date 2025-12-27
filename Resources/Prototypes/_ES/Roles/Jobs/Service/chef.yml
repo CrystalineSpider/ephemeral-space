@@ -2,7 +2,6 @@
   id: ESChef
   name: job-name-chef
   description: job-description-chef
-  suffix: ES
   playTimeTracker: ESJobChef
   requirements:
     - !type:DepartmentTimeRequirement

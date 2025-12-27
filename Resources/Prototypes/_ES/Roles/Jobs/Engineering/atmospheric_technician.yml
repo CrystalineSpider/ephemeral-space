@@ -2,7 +2,6 @@
   id: ESAtmosphericTechnician
   name: job-name-atmostech
   description: job-description-atmostech
-  suffix: ES
   playTimeTracker: ESJobAtmosphericTechnician
   requirements:
   - !type:DepartmentTimeRequirement

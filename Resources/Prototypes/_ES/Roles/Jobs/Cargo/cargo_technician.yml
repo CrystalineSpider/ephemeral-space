@@ -2,7 +2,6 @@
   id: ESCargoTechnician
   name: job-name-cargotech
   description: job-description-cargotech
-  suffix: ES
   playTimeTracker: ESJobCargoTechnician
   startingGear: ESCargoTechGear
   icon: "JobIconCargoTechnician"

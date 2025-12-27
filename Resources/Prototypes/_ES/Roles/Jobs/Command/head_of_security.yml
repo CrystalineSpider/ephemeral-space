@@ -2,7 +2,6 @@
   id: ESHeadOfSecurity
   name: job-name-hos
   description: job-description-hos
-  suffix: ES
   playTimeTracker: ESJobHeadOfSecurity
   requirements:
     - !type:RoleTimeRequirement

@@ -2,7 +2,6 @@
   id: ESBotanist
   name: job-name-botanist
   description: job-description-botanist
-  suffix: ES
   playTimeTracker: ESJobBotanist
   startingGear: ESBotanistGear
   icon: "JobIconBotanist"

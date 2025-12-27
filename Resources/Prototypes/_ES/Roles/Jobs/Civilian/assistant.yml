@@ -2,7 +2,6 @@
   id: ESPassenger
   name: job-name-passenger
   description: job-description-passenger
-  suffix: ES
   playTimeTracker: ESJobPassenger
   startingGear: ESPassengerGear
   icon: "JobIconPassenger"

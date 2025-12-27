@@ -2,7 +2,6 @@
   id: ESSecurityOfficer
   name: job-name-security
   description: job-description-security
-  suffix: ES
   playTimeTracker: ESJobSecurityOfficer
   requirements:
     - !type:DepartmentTimeRequirement

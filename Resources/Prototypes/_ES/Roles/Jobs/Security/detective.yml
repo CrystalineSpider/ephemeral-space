@@ -2,7 +2,6 @@
   id: ESDetective
   name: job-name-detective
   description: job-description-detective
-  suffix: ES
   playTimeTracker: ESJobDetective
   requirements:
   - !type:RoleTimeRequirement

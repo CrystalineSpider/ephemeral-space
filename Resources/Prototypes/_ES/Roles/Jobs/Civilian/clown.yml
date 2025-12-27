@@ -2,7 +2,6 @@
   id: ESClown
   name: job-name-clown
   description: job-description-clown
-  suffix: ES
   playTimeTracker: ESJobClown
   startingGear: ESClownGear
   icon: "JobIconClown"

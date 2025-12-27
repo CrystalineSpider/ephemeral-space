@@ -2,7 +2,6 @@
   id: ESCaptain
   name: job-name-captain
   description: job-description-captain
-  suffix: ES
   playTimeTracker: ESJobCaptain
   requirements:
     - !type:DepartmentTimeRequirement

@@ -2,7 +2,6 @@
   id: ESChemist
   name: job-name-chemist
   description: job-description-chemist
-  suffix: ES
   playTimeTracker: ESJobChemist
   requirements:
     - !type:DepartmentTimeRequirement

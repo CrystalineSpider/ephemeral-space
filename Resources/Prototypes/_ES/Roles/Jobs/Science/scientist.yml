@@ -2,7 +2,6 @@
   id: ESScientist
   name: job-name-scientist
   description: job-description-scientist
-  suffix: ES
   playTimeTracker: ESJobScientist
   requirements:
     - !type:DepartmentTimeRequirement

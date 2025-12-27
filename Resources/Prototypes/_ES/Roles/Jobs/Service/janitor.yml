@@ -2,7 +2,6 @@
   id: ESJanitor
   name: job-name-janitor
   description: job-description-janitor
-  suffix: ES
   playTimeTracker: ESJobJanitor
   startingGear: ESJanitorGear
   icon: "JobIconJanitor"

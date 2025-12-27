@@ -2,7 +2,6 @@
   id: ESReporter
   name: job-name-reporter
   description: job-description-reporter
-  suffix: ES
   playTimeTracker: ESJobReporter
   startingGear: ESReporterGear
   icon: "JobIconReporter"

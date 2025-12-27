@@ -2,7 +2,6 @@
   id: ESHeadOfPersonnel
   name: job-name-hop
   description: job-description-hop
-  suffix: ES
   playTimeTracker: ESJobHeadOfPersonnel
   requirements:
     - !type:DepartmentTimeRequirement

@@ -2,7 +2,6 @@
   id: ESSalvageSpecialist
   name: job-name-salvagespec
   description: job-description-salvagespec
-  suffix: ES
   playTimeTracker: ESJobSalvageSpecialist
   requirements:
     - !type:DepartmentTimeRequirement
