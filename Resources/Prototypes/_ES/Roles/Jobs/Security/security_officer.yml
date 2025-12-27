@@ -38,12 +38,3 @@
   storage:
     back:
     - Flash
-
-- type: chameleonOutfit
-  id: ESSecurityOfficerChameleonOutfit
-  job: ESSecurityOfficer
-  hasMindShield: true
-  equipment:
-    head: ClothingHeadHelmetBasic
-    mask: ClothingMaskGasSecurity
-    gloves: ClothingHandsGlovesColorBlack

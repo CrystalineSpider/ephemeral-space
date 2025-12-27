@@ -30,15 +30,3 @@
     outerClothing: ClothingOuterJacketChef
     belt: ClothingBeltChefFilled
     back: ClothingBackpack
-
-- type: chameleonOutfit
-  id: ESChefChameleonOutfit
-  job: ESChef
-  equipment:
-    head: ClothingHeadHatChef
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskItalianMoustache
-    neck: ClothingNeckScarfStripedBrown
-    outerClothing: ClothingOuterJacketChef
-    gloves: ClothingHandsGlovesColorWhite
-    shoes: ClothingShoesChef

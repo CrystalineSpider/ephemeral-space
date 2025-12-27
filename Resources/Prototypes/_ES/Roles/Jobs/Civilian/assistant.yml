@@ -17,14 +17,3 @@
     ears: ClothingHeadsetGrey
     jumpsuit: ClothingUniformJumpsuitColorGrey
     back: ClothingBackpack
-
-- type: chameleonOutfit
-  id: ESPassengerChameleonOutfit
-  job: ESPassenger
-  equipment:
-    head: ClothingHeadHatWelding
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskGas
-    neck: ClothingNeckMantle
-    outerClothing: ClothingOuterWinterCoat
-    gloves: ClothingHandsGlovesColorYellowBudget

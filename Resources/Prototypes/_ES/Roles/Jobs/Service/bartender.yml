@@ -29,15 +29,3 @@
     jumpsuit: ClothingUniformJumpsuitBartender
     outerClothing: ClothingOuterVest
     back: ClothingBackpack
-
-- type: chameleonOutfit
-  id: ESBartenderChameleonOutfit
-  job: ESBartender
-  equipment:
-    head: ClothingHeadHatTophat
-    eyes: ClothingEyesGlassesSunglasses
-    mask: ClothingMaskBreath
-    neck: ClothingNeckScarfStripedBlack
-    outerClothing: ClothingOuterArmorBasicSlim
-    gloves: ClothingHandsGlovesColorBlack
-

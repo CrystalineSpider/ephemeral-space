@@ -26,14 +26,3 @@
     belt: ClothingBeltJanitorFilled
     jumpsuit: ClothingUniformJumpsuitJanitor
     back: ClothingBackpack
-
-- type: chameleonOutfit
-  id: ESJanitorChameleonOutfit
-  job: ESJanitor
-  equipment:
-    head: ClothingHeadHatPurplesoft
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskGas
-    neck: ClothingNeckScarfStripedPurple
-    outerClothing: ClothingOuterWinterJani
-    gloves: ClothingHandsGlovesJanitor

@@ -73,15 +73,3 @@
   storage:
     back:
     - Flash
-
-- type: chameleonOutfit
-  id: ESHeadOfPersonnelChameleonOutfit
-  job: ESHeadOfPersonnel
-  hasMindShield: true
-  equipment:
-    head: ClothingHeadHatHopcap
-    eyes: ClothingEyesHudCommand
-    mask: ClothingMaskNeckGaiterRed
-    neck: ClothingNeckCloakHop
-    outerClothing: ClothingOuterWinterHoP
-

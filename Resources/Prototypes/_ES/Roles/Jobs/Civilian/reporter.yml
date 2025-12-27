@@ -20,15 +20,3 @@
     head: ClothingHeadHatFedoraGrey
     jumpsuit: ClothingUniformJumpsuitReporter
     back: ClothingBackpack
-
-- type: chameleonOutfit
-  id: ESReporterChameleonOutfit
-  job: ESReporter
-  equipment:
-    head: ClothingHeadHatFedoraGrey
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskBreath
-    outerClothing: ClothingOuterCoatTrench
-    neck: ClothingNeckTieRed
-    gloves: ClothingHandsGlovesFingerless
-    jumpsuit: ClothingUniformJumpsuitReporter

@@ -25,14 +25,3 @@
     jumpsuit: ClothingUniformJumpsuitScientist
     outerClothing: ClothingOuterCoatLabOpened
     back: ClothingBackpackScience
-
-- type: chameleonOutfit
-  id: ESScientistChameleonOutfit
-  job: ESScientist
-  equipment:
-    head: ClothingHeadBandSkull
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskGas
-    neck: ClothingNeckTieSci
-    outerClothing: ClothingOuterCoatRnd
-    gloves: ClothingHandsGlovesLatex

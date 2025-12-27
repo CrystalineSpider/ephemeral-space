@@ -58,11 +58,3 @@
   storage:
     back:
     - Flash
-
-- type: chameleonOutfit
-  id: ESHeadOfSecurityChameleonOutfit
-  job: ESHeadOfSecurity
-  hasMindShield: true
-  equipment:
-    mask: ClothingMaskGasSecurity
-    neck: ClothingNeckCloakHos

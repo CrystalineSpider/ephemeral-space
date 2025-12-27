@@ -29,13 +29,3 @@
     outerClothing: ClothingOuterCoatLabChemOpened
     back: ClothingBackpackChemistry
     pocket1: HandLabeler
-
-- type: chameleonOutfit
-  id: ESChemistChameleonOutfit
-  job: ESChemist
-  equipment:
-    head: ClothingHeadHatBeretMedic
-    mask: ClothingMaskSterile
-    neck: ClothingNeckStethoscope
-    outerClothing: ClothingOuterCoatLabChem
-    gloves: ClothingHandsGlovesLatex

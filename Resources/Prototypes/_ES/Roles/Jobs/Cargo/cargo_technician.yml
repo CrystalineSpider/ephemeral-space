@@ -26,14 +26,3 @@
     head: ClothingHeadHatCargosoft
     jumpsuit: ClothingUniformJumpsuitCargo
     back: ClothingBackpack
-
-- type: chameleonOutfit
-  id: ESCargoTechnicianChameleonOutfit
-  job: ESCargoTechnician
-  equipment:
-    head: ClothingHeadHatCargosoft
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskBreath
-    outerClothing: ClothingOuterWinterCargo
-    neck: ClothingNeckScarfStripedBrown
-    gloves: ClothingHandsGlovesFingerless

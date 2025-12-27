@@ -29,14 +29,3 @@
     head: ClothingHeadHatHardhatYellow
     jumpsuit: ClothingUniformJumpsuitEngineering
     outerClothing: ClothingOuterVestHazard
-
-- type: chameleonOutfit
-  id: ESStationEngineerChameleonOutfit
-  job: ESStationEngineer
-  equipment:
-    head: ClothingHeadHatHardhatYellow
-    mask: ClothingMaskBreath
-    neck: ClothingNeckScarfStripedOrange
-    outerClothing: ClothingOuterWinterEngi
-    gloves: ClothingHandsGlovesColorYellow
-    shoes: ClothingShoesBootsMag

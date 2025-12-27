@@ -34,14 +34,3 @@
     jumpsuit: ClothingUniformJumpsuitMedicalDoctor
     outerClothing: ClothingOuterCoatLabOpened
     back: ClothingBackpackMedical
-
-- type: chameleonOutfit
-  id: ESMedicalDoctorChameleonOutfit
-  job: ESMedicalDoctor
-  equipment:
-    head: ClothingHeadNurseHat
-    eyes: ClothingEyesHudMedical
-    mask: ClothingMaskSterile
-    neck: ClothingNeckStethoscope
-    outerClothing: ClothingOuterCoatLab
-    gloves: ClothingHandsGlovesLatex

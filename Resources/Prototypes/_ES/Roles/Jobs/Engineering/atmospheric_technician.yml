@@ -31,13 +31,3 @@
     ears: ClothingHeadsetEngineering
     jumpsuit: ClothingUniformJumpsuitAtmos
     back: ClothingBackpackEngineering
-
-- type: chameleonOutfit
-  id: ESAtmosphericTechnicianChameleonOutfit
-  job: ESAtmosphericTechnician
-  equipment:
-    head: ClothingHeadHelmetAtmosFire
-    mask: ClothingMaskGasAtmos
-    neck: ClothingNeckScarfStripedLightBlue
-    outerClothing: ClothingOuterSuitAtmosFire
-    gloves: ClothingHandsGlovesColorYellow

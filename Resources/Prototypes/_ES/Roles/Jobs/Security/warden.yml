@@ -45,17 +45,3 @@
   storage:
     back:
     - Flash
-
-- type: chameleonOutfit
-  id: ESWardenChameleonOutfit
-  job: ESWarden
-  hasMindShield: true
-  equipment:
-    head: ClothingHeadHatWarden
-    mask: ClothingMaskGasSecurity
-    outerClothing: ClothingOuterCoatWarden
-    jumpsuit: ClothingUniformJumpsuitWarden
-    neck: Dinkystar
-    belt: ClothingBeltSecurity
-    gloves: ClothingHandsGlovesColorBlack
-    shoes: ClothingShoesBootsJack

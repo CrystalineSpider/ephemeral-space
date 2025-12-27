@@ -29,14 +29,3 @@
     jumpsuit: ClothingUniformJumpsuitHydroponics
     outerClothing: ClothingOuterApronBotanist
     back: ClothingBackpackHydroponics
-
-- type: chameleonOutfit
-  id: ESBotanistChameleonOutfit
-  job: ESBotanist
-  equipment:
-    head: ClothingHeadBandBotany
-    eyes: ClothingEyesGlassesCheapSunglasses
-    mask: ClothingMaskBreath
-    neck: ClothingNeckScarfStripedGreen
-    outerClothing: ClothingOuterApronBotanist
-    gloves: ClothingHandsGlovesLeather

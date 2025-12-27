@@ -43,13 +43,3 @@
     back:
     - RubberStampClown
     - CrayonRainbow
-
-- type: chameleonOutfit
-  id: ESClownChameleonOutfit
-  job: ESClown
-  equipment:
-    head: ClothingHeadHatXmasCrown
-    eyes: ClothingEyesGlassesCheapSunglasses
-    neck: ClothingHeadHatFlowerWreath
-    outerClothing: ClothingOuterClownPriest
-    gloves: ClothingHandsGlovesColorYellowBudget
