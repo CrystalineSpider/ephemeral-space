@@ -49,7 +49,7 @@
   suffix: ES
   components:
   - type: SpawnPoint
-    job_id: Passenger
+    job_id: ESPassenger
   - type: Sprite
     layers:
       - state: green
