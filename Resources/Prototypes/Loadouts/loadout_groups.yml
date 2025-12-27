@@ -1374,6 +1374,19 @@
   - LizardPlushieChiefMedicalOfficer
 
 - type: loadoutGroup
+  id: MedicalDoctorHead
+  name: loadout-group-medical-doctor-head
+  minLimit: 0
+  loadouts:
+  - MedicalBeret
+  - SeniorPhysicianBeret
+  - MedicalHeadMirror
+  - BlueSurgeryCap
+  - GreenSurgeryCap
+  - PurpleSurgeryCap
+  - NurseHat
+
+- type: loadoutGroup
   id: MedicalDoctorJumpsuit
   name: loadout-group-medical-doctor-jumpsuit
   loadouts:
