@@ -59,3 +59,28 @@ Entries:
         station.
   id: 8
   time: '2026-04-24T15:13:40.0000000+00:00'
+- author: mirrorcult
+  changes:
+    - type: Add
+      message: >-
+        Being in braincrit now allows you to succumb with an action once more
+        (or say last words)
+  id: 9
+  time: '2026-05-03T00:53:56.0000000+00:00'
+- author: mirrorcult
+  changes:
+    - type: Tweak
+      message: >-
+        New fully-random masquerades incorporating parasites have been added.
+        All masquerades will be random for a moment as we test it out and see
+        what things work to help with designing masquerades in the future.
+  id: 10
+  time: '2026-05-03T20:28:29.0000000+00:00'
+- author: mirrorcult
+  changes:
+    - type: Tweak
+      message: >-
+        Slight rebalance of crew thrusters + nav console + warp drive to be a
+        little more relevant
+  id: 11
+  time: '2026-05-03T21:35:10.0000000+00:00'
