@@ -23,7 +23,7 @@ namespace Content.Shared.Fluids;
 public abstract partial class SharedPuddleSystem
 {
     private static readonly FixedPoint2 MeleeHitTransferProportion = 0.25;
-    [Dependency] private readonly InjectorSystem _injectorSystem = default!;
+    [Dependency] private InjectorSystem _injectorSystem = default!;
 
     protected virtual void InitializeSpillable()
     {
@@ -170,7 +170,7 @@ public abstract partial class SharedPuddleSystem
 
             Reactive.DoEntityReaction(hit, splitSolution, ReactionMethod.Touch, args.User);
 
-            Popups.PopupClient(Loc.GetString("spill-melee-hit-attacker",
+            Popups.PopupEntity(Loc.GetString("spill-melee-hit-attacker",
                     ("amount", totalSplit / hitCount),
                     ("spillable", entity.Owner),
                     ("target", Identity.Entity(hit, EntityManager, args.User))),

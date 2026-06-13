@@ -7,11 +7,11 @@ using Content.Shared.Mind;
 
 namespace Content.Server._ES.Masks.Psychid;
 
-public sealed class ESPsychidSystem : EntitySystem
+public sealed partial class ESPsychidSystem : EntitySystem
 {
-    [Dependency] private readonly SharedMindSystem _mind = default!;
-    [Dependency] private readonly ESSharedMaskSystem _mask = default!;
-    [Dependency] private readonly RejuvenateSystem _rejuvenate = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
+    [Dependency] private ESSharedMaskSystem _mask = default!;
+    [Dependency] private RejuvenateSystem _rejuvenate = default!;
 
     public override void Initialize()
     {
@@ -23,11 +23,13 @@ public sealed class ESPsychidSystem : EntitySystem
 
     private void OnKillReported(Entity<ESPsychidComponent> ent, ref ESPlayerKilledEvent args)
     {
-        if (!args.ValidKill || !_mind.TryGetMind(args.Killer.Value, out var killerMind))
+        if (!args.ValidKill ||
+            !_mind.TryGetMind(args.Killer.Value, out var killerMind) ||
+            _mask.GetTroupeOrNull(killerMind.Value.AsNullable()) == ent.Comp.IgnoredTroupe)
+        {
+            ent.Comp.KillerMind = null;
             return;
-
-        if (_mask.GetTroupeOrNull(killerMind.Value.AsNullable()) == ent.Comp.IgnoredTroupe)
-            return;
+        }
 
         ent.Comp.KillerMind = killerMind;
 
@@ -58,6 +60,9 @@ public sealed class ESPsychidSystem : EntitySystem
 
         _mask.ChangeMask((killerMind, killerMindComp), victimMask.Value);
         _mind.SwapMinds(killerMind, killerBody, ent.Owner, ownedEntity);
+
+        // Reset this so we don't hold a reference
+        ent.Comp.KillerMind = null;
 
         args.Handled = true;
         args.Result = true;

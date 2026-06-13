@@ -29,11 +29,14 @@ es-mask-phantom-desc = As a Phantom, reincarnate as a vengeful spirit on death a
 es-mask-pickpocket-name = Pickpocket
 es-mask-pickpocket-desc = As a Pickpocket, sneak behind peoples' backs to snatch their belongings and grow your collection.
 
+es-mask-rebel-name = Rebel
+es-mask-rebel-desc = As a Rebel, sabotage machines around the station in fervent protest. Try not to get pinned as a Traitor.
+
 es-mask-secretary-name = Secretary
 es-mask-secretary-desc = As a Secretary, do whatever you can to help your target complete their objectives.
 
-es-mask-rebel-name = Rebel
-es-mask-rebel-desc = As a Rebel, sabotage machines around the station in fervent protest. Try not to get pinned as a Traitor.
+es-mask-tragedian-name = Tragedian
+es-mask-tragedian-desc = As a Tragedian, perform your theme to the bitter end in order to please the watching stagehands.
 
 es-mask-vigilante-name = Vigilante
 es-mask-vigilante-desc = As a Vigilante, seek out those who have killed others and bring them to justice by killing them yourself.
@@ -62,6 +65,9 @@ es-mask-subverter-desc = As a Subverter, you have received two brain-altering ch
 es-mask-demolitionist-name = Demolitionist
 es-mask-demolitionist-desc = As a Demolitionist, you have been trained by the Syndicate for both controlled and uncontrolled "demolitions"--including in the use of explosive implants, should things turn out that way.
 
+es-mask-sympathizer-name = Sympathizer
+es-mask-sympathizer-desc = As a Sympathizer, you are an adherent to Syndicate philosophy, win with the traitors, and count as a traitor--but you are unaware of who the traitors are and what their objectives are.
+
 # Paraiste masks
 es-mask-troupe-parasite-examine = They're a fellow host of the [bold][color=tan]parasitic infection[/color][/bold]. Conspire with them to spread the infection.
 
@@ -79,7 +85,7 @@ es-mask-psychid-desc = As a Psychid, be killed in order to swap bodies and creat
 
 # Oddballs
 es-mask-sleeper-agent-name = Sleeper Agent
-es-mask-sleeper-agent-desc = As a Sleeper Agent, you're a member of crew and win with them, unless the entire traitors team dies, upon which you switch sides and gain a new mask.
+es-mask-sleeper-agent-desc = As a Sleeper Agent, you're a member of crew and win with them. When a traitor dies, you have a chance to switch sides and gain a new mask.
 
 # Meta
 es-objective-issuer-mask = Mask

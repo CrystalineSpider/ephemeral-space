@@ -6,6 +6,7 @@ using Content.Server.Doors.Systems;
 using Content.Server.Electrocution;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Popups;
+using Content.Server.Power.EntitySystems;
 using Content.Server.Screens.Components;
 using Content.Shared._ES.Core.Timer;
 using Content.Shared.DeviceNetwork;
@@ -29,17 +30,18 @@ namespace Content.Server._ES.Armory;
 ///       with an announcement, and the buttons cannot be pressed again for a certain amount of time
 /// </summary>
 // todo test this behavior should be easily testable more or less
-public sealed class ESArmorySystem : GameRuleSystem<ESArmoryGameRuleComponent>
+public sealed partial class ESArmorySystem : GameRuleSystem<ESArmoryGameRuleComponent>
 {
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly DeviceNetworkSystem _devicenet = default!;
-    [Dependency] private readonly DoorSystem _door = default!;
-    [Dependency] private readonly ElectrocutionSystem _electrocution = default!;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly ESEntityTimerSystem _timer = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private AudioSystem _audio = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private DeviceNetworkSystem _devicenet = default!;
+    [Dependency] private DoorSystem _door = default!;
+    [Dependency] private ElectrocutionSystem _electrocution = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private ESEntityTimerSystem _timer = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private PowerReceiverSystem _powerReceiver = default!;
 
     public override void Initialize()
     {
@@ -116,7 +118,7 @@ public sealed class ESArmorySystem : GameRuleSystem<ESArmoryGameRuleComponent>
         if (!GameTicker.IsGameRuleActive<ESArmoryGameRuleComponent>() || GetArmorySingleton() is not { } armory)
             return;
 
-        if (armory.Opened)
+        if (armory.Opened || !_powerReceiver.IsPowered(ent.Owner))
             return;
 
         // no need to check cooldown time since the update loop will handle that stuff, just check if theres any cooldown

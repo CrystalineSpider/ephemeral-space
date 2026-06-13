@@ -30,20 +30,20 @@ namespace Content.Server._ES.Radstorm;
 ///     Controls the radstorm round end behavior: after a certain amount of time, a radstorm will come and slowly kill everyone onboard the station.
 ///     This is announced on the shuttle, as well as announced
 /// </summary>
-public sealed class ESRadstormRoundEndRuleSystem : GameRuleSystem<ESRadstormRoundEndRuleComponent>
+public sealed partial class ESRadstormRoundEndRuleSystem : GameRuleSystem<ESRadstormRoundEndRuleComponent>
 {
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly BrainDamageSystem _brainDamage = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly DamageableSystem _damage = default!;
-    [Dependency] private readonly GameTicker _ticker = default!;
-    [Dependency] private readonly SharedMapSystem _map = default!;
-    [Dependency] private readonly RoundEndSystem _roundEnd = default!;
-    [Dependency] private readonly PointLightSystem _pointlight = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private BrainDamageSystem _brainDamage = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private DamageableSystem _damage = default!;
+    [Dependency] private GameTicker _ticker = default!;
+    [Dependency] private SharedMapSystem _map = default!;
+    [Dependency] private RoundEndSystem _roundEnd = default!;
+    [Dependency] private PointLightSystem _pointlight = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
 
     protected override void Started(EntityUid uid,
         ESRadstormRoundEndRuleComponent component,
@@ -90,8 +90,6 @@ public sealed class ESRadstormRoundEndRuleSystem : GameRuleSystem<ESRadstormRoun
         {
             component.RadstormNextDamageTickTime = _timing.CurTime + TimeSpan.FromSeconds(1);
 
-            // HELL EVERLASTING! DIE FOREVER!
-            var stillAlive = 0;
             // this should probably not be bounded to mobstate and instead be its own thing but whatever
             var killQuery = EntityQueryEnumerator<MobStateComponent, DamageableComponent, TransformComponent>();
             while (killQuery.MoveNext(out var mob, out var state, out var damageable, out var xform))
@@ -110,18 +108,22 @@ public sealed class ESRadstormRoundEndRuleSystem : GameRuleSystem<ESRadstormRoun
                 if (TryComp<BrainDamageComponent>(mob, out var brainDamage))
                     _brainDamage.TryChangeBrainDamage((mob, brainDamage), brainDamage.MaxDamage / 20);
 
-                // only count mobs which actually end up taking damage from this
-                var dmg = _damage.ChangeDamage((mob, damageable), component.RadstormDamagePerSecond, true, false);
-                if (dmg.GetTotal() > FixedPoint2.Zero && state.CurrentState != MobState.Dead)
-                    stillAlive += 1;
+                _damage.ChangeDamage((mob, damageable), component.RadstormDamagePerSecond, true, false);
             }
+        }
 
-            // show is over
-            // (make sure we only actually do this if after time and not just deadly space)
-            // (i kind of implemented that in a weird way huh)
-            if (stillAlive == 0 && RadstormStarted((uid, component)))
-                _roundEnd.EndRound();
+        // If everyone's dead, end the round
+        var actorQuery = EntityQueryEnumerator<ActorComponent>();
+        var allDead = true;
+        while (actorQuery.MoveNext(out var mob, out _))
+        {
+            if (TryComp<MobStateComponent>(mob, out var state) && state.CurrentState != MobState.Dead)
+                allDead = false;
+        }
 
+        if (allDead)
+        {
+            _roundEnd.EndRound();
             return;
         }
 

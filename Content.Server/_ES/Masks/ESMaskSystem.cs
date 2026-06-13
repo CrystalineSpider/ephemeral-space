@@ -21,16 +21,16 @@ using Robust.Shared.Utility;
 
 namespace Content.Server._ES.Masks;
 
-public sealed class ESMaskSystem : ESSharedMaskSystem
+public sealed partial class ESMaskSystem : ESSharedMaskSystem
 {
-    [Dependency] private readonly IChatManager _chat = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly ActionsSystem _actions = default!;
-    [Dependency] private readonly EntityTableSystem _entityTable = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!;
-    [Dependency] private readonly JobSystem _job = default!;
-    [Dependency] private readonly ESStagehandNotificationsSystem _stagehandNotifications = default!;
-    [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
+    [Dependency] private IChatManager _chat = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private ActionsSystem _actions = default!;
+    [Dependency] private EntityTableSystem _entityTable = default!;
+    [Dependency] private GameTicker _gameTicker = default!;
+    [Dependency] private JobSystem _job = default!;
+    [Dependency] private ESStagehandNotificationsSystem _stagehandNotifications = default!;
+    [Dependency] private StationSpawningSystem _stationSpawning = default!;
 
     private static readonly EntProtoId<ESMaskRoleComponent> MindRole = "ESMindRoleMask";
 
@@ -179,7 +179,17 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
     public void InitializeTroupeObjectives(Entity<ESTroupeRuleComponent> rule)
     {
         var troupe = PrototypeManager.Index(rule.Comp.Troupe);
-        Objective.TryAddObjective(rule.Owner, troupe.Objectives);
+        foreach (var objective in _entityTable.GetSpawns(troupe.Objectives))
+        {
+            if (!Objective.TryAddObjective(rule.Owner, objective, out var objectiveUid))
+                continue;
+
+            Objective.SetDescriptor(
+                objectiveUid.Value,
+                Loc.GetString("es-objective-text-troupe"),
+                troupe.Color,
+                Loc.GetString("es-objective-tooltip-troupe"));
+        }
     }
 
     public bool IsPlayerValid(ESMaskPrototype mask, ICommonSession player)
@@ -217,7 +227,17 @@ public sealed class ESMaskSystem : ESSharedMaskSystem
         roleComp.Mask = maskId;
         Dirty(role.Value, roleComp);
 
-        Objective.TryAddObjective(mind.Owner, mask.Objectives);
+        foreach (var objective in _entityTable.GetSpawns(mask.Objectives))
+        {
+            if (!Objective.TryAddObjective(mind.Owner, objective, out var objectiveUid))
+                continue;
+
+            Objective.SetDescriptor(
+                objectiveUid.Value,
+                Loc.GetString("es-objective-text-mask"),
+                mask.Color,
+                Loc.GetString("es-objective-tooltip-mask"));
+        }
 
         var msg = Loc.GetString("es-mask-selected-chat-message",
             ("role", Loc.GetString(mask.Name)),
