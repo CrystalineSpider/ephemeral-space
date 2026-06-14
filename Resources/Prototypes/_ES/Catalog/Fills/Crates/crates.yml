@@ -417,7 +417,7 @@
     - id: ESWeaponPistol9mm
     - id: ESWeaponPistol9mmSilenced
     - id: ESClothingOuterArmorSecurity
-    - id: ExGrenade
+    - id: ExGrenade     # Notably not a typo but it looks like it
     - id: ESSpeedLoader357
       amount: 2
     - id: ESMagazine9mm
