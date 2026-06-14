@@ -3,22 +3,22 @@
   table:
     group:
     - tableId: ESMaintLootWorthless
-      weight: 25
+      weight: 35
     - tableId: ESMaintLootCommon
-      weight: 45
+      weight: 52
     - tableId: ESMaintLootUncommon
-      weight: 24
+      weight: 12
     - tableId: ESMaintLootRare
-      weight: 6
+      weight: 1
 
 - type: entityTable
   id: ESMaintLootExposed # for placing on racks or tables
   table:
     group:
     - tableId: ESMaintLootCommon
-      weight: 48
+      weight: 50
     - tableId: ESMaintLootUncommon
-      weight: 43
+      weight: 45
     - weight: 3
       group:
       - id: ToolboxEmergencyFilled
@@ -28,7 +28,7 @@
       - id: ToolboxArtisticFilled
         weight: 0.1
     - tableId: ESMaintLootRare
-      weight: 6
+      weight: 2
 
 - type: entityTable
   id: ESMaintLootValuable
@@ -302,7 +302,7 @@
   table:
     group:
     - tableId: ESMaintsTraitorLoot
-      weight: 8
+      weight: 4
     - id: ESWeaponKnife
       weight: 2
     - id: WelderIndustrialAdvanced
@@ -315,18 +315,19 @@
     - id: ClothingEyesGlassesSunglasses
     - id: ClothingHandsGlovesColorYellow
 
-    - group:
-      - all: # Russian Outfit
-        - id: ESClothingHeadUshanka
-        - id: ESClothingUniformJumpsuitRussianColorGrey
-        - id: ClothingShoesColorBrown
-      - group: # Funny Shoes
-        - id: ClothingShoeSlippersDuck
-        - id: ClothingUnderSocksBee
-        - id: ClothingUnderSocksCoder
-      - all:
-        - id: ClothingOuterCoatPirate
-        - id: ClothingHeadHatPirateTricord
+    - all: # Russian Outfit
+      - id: ESClothingHeadUshanka
+      - id: ESClothingUniformJumpsuitRussianColorGrey
+      - id: ClothingShoesColorBrown
+      weight: 0.5
+    - group: # Funny Shoes
+      - id: ClothingShoeSlippersDuck
+      - id: ClothingUnderSocksBee
+      - id: ClothingUnderSocksCoder
+      weight: 0.5
+    - all:
+      - id: ClothingOuterCoatPirate
+      - id: ClothingHeadHatPirateTricord
       weight: 0.5
 
     - group: # Goofy items
