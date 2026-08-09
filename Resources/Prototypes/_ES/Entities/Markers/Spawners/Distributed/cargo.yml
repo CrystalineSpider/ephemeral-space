@@ -8,7 +8,8 @@
     - id: ESCrateMaterialPlasteel
       weight: 0.5
     - id: ESCrateEngineeringCableBulk
-      weight: 0.25  #I'm not sure how useful this will be but I don't want to remove it yet
+      weight: 0.25
+    - id: ESCrateEngineeringBarricade
 
 - type: entityTable
   id: ESCargoMedicalCratesTable
@@ -33,6 +34,8 @@
     - id: ESCrateSecurityEnergyRifles
       weight: 0.5
     - id: ESCrateSecurityThrowables
+      weight: 0.5
+    - id: ESCrateCargoLostCache
       weight: 0.5
 
 - type: entityTable

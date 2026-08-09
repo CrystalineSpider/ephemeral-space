@@ -83,6 +83,20 @@
         - id: PowerDrill
         - id: JawsOfLife
 
+- type: entity
+  parent: CrateGenericSteel
+  id: ESCrateEngineeringBarricade
+  name: bulk cable crate
+  description: Some sturdy wooden barricade kits.
+  suffix: ES
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+      - id: ESKitBarricade
+        amount: 3
+
+
 #Medical
 - type: entity
   parent: CrateMedical
@@ -173,7 +187,7 @@
   parent: CrateWeaponSecure
   id: ESCrateSecurityPistols
   name: pistol crate
-  description: Contains two 9mm pistols and a spare mag for each. Requires Armory access to open.
+  description: Contains two 9mm pistols and a spare mag for each. Requires Security access to open.
   suffix: ES
   components:
   - type: EntityTableContainerFill
@@ -189,7 +203,7 @@
   parent: CrateWeaponSecure
   id: ESCrateSecurityShotgun
   name: shotgun crate
-  description: Contains one shotgun and two boxes of shells. Requires Armory access to open.
+  description: Contains one shotgun and two boxes of shells. Requires Security access to open.
   suffix: ES
   components:
   - type: EntityTableContainerFill
@@ -221,7 +235,7 @@
   parent: CrateWeaponSecure
   id: ESCrateSecurityEnergyRifles
   name: energy rifle crate
-  description: Contains two energy rifles. Requires Armory access to open.
+  description: Contains two energy rifles. Requires Security access to open.
   suffix: ES
   components:
   - type: EntityTableContainerFill
@@ -229,6 +243,31 @@
       entity_storage:
         id: ESWeaponEnergyRifle
         amount: 2
+
+- type: entity
+  parent: CrateGenericSteel
+  id: ESCrateCargoLostCache
+  name: unmarked crate
+  description: An unmarked crate, so normal yet so unusual.
+  suffix: ES
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        all:
+        - id: SubverterWeapons
+        - group:
+          - id: SleepyPen
+            weight: 0.5
+          - id: ESWeaponKnife
+          - id: SmokeGrenade
+        - group:
+          - id: C4
+            weight: 0.5
+          - id: ExGrenade
+          - id: GrenadeFlashBang
+          - id: PainkillerAutoInjector
+            amount: 2
 
 #Service
 - type: entity
@@ -398,8 +437,4 @@
     - tableId: ESCargoEngineeringCratesTable
       weight: 2
     - id: ESGeneralToolsCrate
-    - id: ESCrateEmergencyFire
-    - id: ESCrateEmergencyEVA    #These four aren't just ESGeneralCratesTable due to the Water tank and advanced tools
-    - tableId: ESCargoGeneralCratesTable
-    - tableId: ESCargoMedicalCratesTable
-      weight: 0.5
+    - id: ESC
