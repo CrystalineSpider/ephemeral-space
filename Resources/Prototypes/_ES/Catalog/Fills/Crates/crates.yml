@@ -247,27 +247,32 @@
 - type: entity
   parent: CrateGenericSteel
   id: ESCrateCargoLostCache
-  name: unmarked crate
-  description: An unmarked crate, so normal yet so unusual.
+  name: crate
+  description: A large container for items.
   suffix: ES
   components:
   - type: EntityTableContainerFill
     containers:
       entity_storage:
         all:
-        - id: SubverterWeapons
-        - group:
+        - id: ESWeaponPistol9mm
+        - group: #secondary item from traitor caches
           - id: SleepyPen
+            weight: 0.25
+          - id: C4
             weight: 0.5
           - id: ESWeaponKnife
           - id: SmokeGrenade
-        - group:
-          - id: C4
-            weight: 0.5
+        - group: #third item mostly from random maints loot
           - id: ExGrenade
+            weight: 0.5
           - id: GrenadeFlashBang
           - id: PainkillerAutoInjector
             amount: 2
+          - id: ESDoorJammer
+          - id: ESNet
+          - id: FoodApple
+            weight: 0.1
 
 #Service
 - type: entity
